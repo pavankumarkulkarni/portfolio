@@ -1,0 +1,133 @@
+.header {
+    color: aqua;
+    text-align: center;
+    margin-top: 4rem;
+    animation: slide 2s ease-in-out infinite alternate forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-30px);
+    }
+    100% {
+        transform: translateX(30px);
+    }
+}
+
+.header p {
+    display: inline;
+    font-size: 3rem;
+    text-transform: uppercase;
+    animation: bounce 2s ease-in-out infinite normal forwards;
+}
+
+.header p:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.header p:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.header p:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.header p:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.header p:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+.header p:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+.header p:nth-child(8) {
+    animation-delay: 0.7s;
+}
+
+.header p:nth-child(9) {
+    animation-delay: 0.8s;
+}
+
+.header p:nth-child(10) {
+    animation-delay: 0.9s;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-40px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.circle {
+    margin: 2rem auto;
+    width: 300px;
+    height: 300px;
+    border: 5px solid limegreen;
+    border-radius: 50%;
+    animation: circle 1s linear infinite alternate forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square {
+    width: 150px;
+    height: 150px;
+    border: 5px solid purple;
+    animation: square 2s ease-in-out infinite alternate forwards;
+}
+
+@keyframes circle {
+    0% {
+        border: 5px solid limegreen;
+    }
+    25% {
+        border: 5px solid lightblue;
+    }
+    50% {
+        border: 5px solid lightcoral;
+    }
+    75% {
+        border: 5px solid lightsalmon;
+    }
+    100% {
+        border: 5px solid powderblue;
+    }
+}
+
+@keyframes square {
+    0% {
+        border: 5px solid limegreen;
+        transform: rotate(0deg);
+    }
+    25% {
+        border: 8px solid lightblue;
+        transform: rotate(90deg);
+    }
+    50% {
+        border: 11px solid lightcoral;
+        transform: rotate(180deg);
+    }
+    75% {
+        border: 14px solid lightsalmon;
+        transform: rotate(270deg);
+    }
+    100% {
+        border: 30px solid powderblue;
+        transform: rotate(360deg);
+    }
+}
