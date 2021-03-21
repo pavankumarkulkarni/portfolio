@@ -1,0 +1,89 @@
+.card {
+    width: 300px;
+    margin: 6rem auto;
+    background-color: #efebde;
+    color: #333;
+    border-radius: 10px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+    transition: all 0.5s ease;
+}
+
+.card h3 {
+    text-align: center;
+}
+
+.cardBody {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.cardBody img {
+    height: 300px;
+    position: relative;
+    left: -50px;
+    bottom: -1rem;
+    transition: all 1s ease
+}
+
+.cardBody_text {
+    opacity: 0;
+    visibility: 0;
+    transition: opacity -1s ease-out 0.5s;
+}
+
+.cardBody_text>p {
+    margin-bottom: 2rem;
+}
+
+.cardBody button {
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #fff;
+    font-weight: bold;
+}
+
+.cardBody button:hover {
+    cursor: pointer;
+    filter: brightness(0.8);
+}
+
+.cardBody a {
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #fff;
+    font-weight: bold;
+}
+
+.cardBody a:hover {
+    cursor: pointer;
+    filter: brightness(0.8);
+}
+
+.card:hover {
+    cursor: pointer;
+    width: 600px;
+}
+
+.card:hover .cardBody img {
+    height: 450px;
+    left: 40px;
+    bottom: 150px
+}
+
+.card:hover .cardBody_text {
+    opacity: 1;
+}
+
+.card:hover h3 {
+    text-align: left;
+    margin-bottom: 1rem;
+}
