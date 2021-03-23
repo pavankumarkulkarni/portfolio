@@ -7,8 +7,8 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <a href="#work">
-              <strong>work</strong>
+            <a href="#portfolio">
+              <strong>portfolio</strong>
             </a>
           </li>
           <li>

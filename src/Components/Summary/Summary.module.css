@@ -1,6 +1,6 @@
 .card {
     width: 300px;
-    margin: 6rem auto;
+    margin: 0 auto;
     background-color: #efebde;
     color: #333;
     border-radius: 10px;
@@ -8,11 +8,12 @@
     display: flex;
     flex-direction: column;
     padding: 0.5rem 1rem;
-    transition: all 0.5s ease;
+    animation: profile_card 1s ease 1s 1 normal forwards;
 }
 
 .card h3 {
     text-align: center;
+    animation: profile_h3 1s ease 1s 1 normal forwards;
 }
 
 .cardBody {
@@ -26,13 +27,13 @@
     position: relative;
     left: -50px;
     bottom: -1rem;
-    transition: all 1s ease
+    animation: profile_pic 1s ease 1s 1 normal forwards;
 }
 
 .cardBody_text {
     opacity: 0;
-    visibility: 0;
-    transition: opacity -1s ease-out 0.5s;
+    text-align: justify;
+    animation: profile_text 1s ease 2s 1 normal forwards;
 }
 
 .cardBody_text>p {
@@ -68,22 +69,35 @@
     filter: brightness(0.8);
 }
 
-.card:hover {
-    cursor: pointer;
-    width: 600px;
+@keyframes profile_card {
+    from {
+        width: 300px
+    }
+    to {
+        width: 600px;
+    }
 }
 
-.card:hover .cardBody img {
-    height: 450px;
-    left: 40px;
-    bottom: 150px
+@keyframes profile_h3 {
+    from {
+        text-align: center;
+    }
+    to {
+        text-align: left;
+        margin-bottom: 1rem;
+    }
 }
 
-.card:hover .cardBody_text {
-    opacity: 1;
+@keyframes profile_pic {
+    to {
+        height: 450px;
+        left: 40px;
+        bottom: 150px;
+    }
 }
 
-.card:hover h3 {
-    text-align: left;
-    margin-bottom: 1rem;
+@keyframes profile_text {
+    to {
+        opacity: 1;
+    }
 }

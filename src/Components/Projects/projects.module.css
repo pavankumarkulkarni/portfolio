@@ -1,0 +1,39 @@
+.card {
+    height: 300px;
+    width: 600px;
+    background-color: #efebde;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+}
+
+.card header {
+    margin-bottom: 1rem;
+}
+
+.cardbody {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.cardbody img {
+    width: 250px;
+}
+
+.cardbody ul {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    grid-gap: 0.5rem;
+}
+
+.cardbody li {
+    list-style: none;
+    padding: 0.2rem 0.4rem;
+    background-color: #555;
+    /* margin: 0.5rem; */
+    border-radius: 10px;
+    font-size: 0.7rem;
+    color: aliceblue;
+}

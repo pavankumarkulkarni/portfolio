@@ -1,9 +1,15 @@
 import img from "../Pavan.jfif";
 import style from "./Summary.module.css";
-import myPic from "../profile.png";
+import myPic from "../images/profile.png";
 const Maincontent = () => {
   return (
     <div className="main">
+      <div className="section-header">
+        <div>
+          <h3>Summary</h3>
+        </div>
+        <div className="section-divider"></div>
+      </div>
       <div className={style.card}>
         <h3>Pavan Kumar Kulkarni</h3>
         <div className={style.cardBody}>
