@@ -1,5 +1,5 @@
 .card {
-    height: 300px;
+    /* height: 300px; */
     width: 600px;
     background-color: #efebde;
     border-radius: 10px;
@@ -14,6 +14,7 @@
 .cardbody {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
 }
 
 .cardbody img {

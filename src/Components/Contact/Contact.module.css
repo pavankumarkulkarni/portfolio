@@ -1,3 +1,7 @@
+.contact {
+    padding-bottom: 2rem;
+}
+
 .contactlist {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

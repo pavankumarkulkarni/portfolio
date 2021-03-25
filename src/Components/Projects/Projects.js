@@ -2,7 +2,7 @@ import React from "react";
 import projects from "../data/projects";
 import style from "./projects.module.css";
 
-const Projects = () => {
+const Projects = ({ openModal }) => {
   const projectDisplay = projects.data.map((project) => {
     return (
       <section className={style.card}>
@@ -21,10 +21,14 @@ const Projects = () => {
           <div>
             <img src={project.img} alt="" />
           </div>
+          <button
+            type="button"
+            className="btn"
+            onClick={() => openModal(project)}
+          >
+            View Details
+          </button>
         </article>
-        <button type="button" className="btn">
-          View Details
-        </button>
         <a href={project.appUrl} target="blank" className="btn blockbtn">
           Launch App
         </a>
@@ -40,6 +44,7 @@ const Projects = () => {
         </div>
         <div className="section-divider"></div>
       </div>
+
       {projectDisplay}
     </div>
   );

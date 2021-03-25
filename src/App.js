@@ -4,9 +4,17 @@ import Projects from "./Components/Projects/Projects";
 import Contact from "./Components/Contact/Contact";
 import Loading from "./Components/Loading/Loading";
 import React from "react";
+import Modal from "./Components/Modal/Modal";
 
 function App() {
   const [loading, setLoading] = React.useState(true);
+  const [showModal, setShowModal] = React.useState(false);
+  const [projectOnModal, setProjectOnModal] = React.useState(null);
+
+  const openModal = (project) => {
+    setShowModal(true);
+    setProjectOnModal(project);
+  };
   React.useEffect(() => {
     setTimeout(() => {
       setLoading(false);
@@ -19,10 +27,13 @@ function App() {
           <Loading />
         ) : (
           <>
+            {showModal && (
+              <Modal setShowModal={setShowModal} project={projectOnModal} />
+            )}
             <div className="headerbg"></div>
             <Header />
             <Summary />
-            <Projects />
+            <Projects openModal={openModal} />
             <Contact />
           </>
         )}

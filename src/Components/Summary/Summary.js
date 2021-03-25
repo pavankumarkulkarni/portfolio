@@ -21,7 +21,7 @@ const Maincontent = () => {
               natus delectus non?
             </p>
             {/* <button type="button">Projects</button> */}
-            <a href="#work">Projects</a>
+            <a href="#portfolio">Projects</a>
           </article>
           <article className={style.cardBody_image}>
             <img src={myPic} alt="Pavan" />
