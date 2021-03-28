@@ -10,11 +10,104 @@
     z-index: 100;
 }
 
-.content {
+.modal {
     width: 600px;
     margin: 4rem auto;
     max-height: calc(100vh - 8rem);
     background-color: bisque;
     border-radius: 0.5rem;
     padding: 1rem;
+    position: relative;
+    top: -100vh;
+    animation: dropIn 0.5s ease-in-out 0.2s 1 normal forwards;
+}
+
+@keyframes dropIn {
+    from {
+        position: relative;
+        top: -100vh;
+    }
+    to {
+        position: relative;
+        top: 0vh
+    }
+}
+
+.modalheader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.closeBtn {
+    border: none;
+    background-color: unset;
+}
+
+.closeBtn:hover {
+    cursor: pointer;
+}
+
+.modalContent {
+    padding: 1rem 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+}
+
+.modalContent p {
+    margin-bottom: 1rem;
+}
+
+.modalContent a span {
+    margin-left: 1rem;
+}
+
+.modalContent a {
+    display: flex;
+    width: 40%;
+    margin-bottom: 0.5rem;
+}
+
+.modalImages {
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+}
+
+.modalImages img {
+    width: 100%;
+    height: 50%;
+    margin-bottom: 1rem;
+    object-fit: contain;
+    animation: slidein 0.5s ease-in-out 0.5s 1 normal forwards;
+}
+
+.modalText {
+  opacity:0;
+    animation: slidein2 0.5s ease-in-out 1s 1 normal forwards;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: -100vw;
+        opacity: 0;
+    }
+    to {
+        margin-left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes slidein2 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.icon {
+    size: 3rem;
 }

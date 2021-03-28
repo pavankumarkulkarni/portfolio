@@ -5,7 +5,7 @@ import style from "./projects.module.css";
 const Projects = ({ openModal }) => {
   const projectDisplay = projects.data.map((project) => {
     return (
-      <section className={style.card}>
+      <section className={style.card} key={project._id}>
         <header>
           <h3>{project.name}</h3>
         </header>
@@ -14,12 +14,12 @@ const Projects = ({ openModal }) => {
             <p>{project.summary}</p>
             <ul>
               {project.keywords.map((k) => (
-                <li>{k}</li>
+                <li key={k}>{k}</li>
               ))}
             </ul>
           </div>
           <div>
-            <img src={project.img} alt="" />
+            <img src={project.img[0]} alt="" />
           </div>
           <button
             type="button"

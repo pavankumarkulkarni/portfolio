@@ -5,6 +5,7 @@
     border-radius: 10px;
     padding: 0.5rem 1rem;
     margin: 1rem 0;
+    box-shadow: 1px 1px 5px #d2232e;
 }
 
 .card header {
