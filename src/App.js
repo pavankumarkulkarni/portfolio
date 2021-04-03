@@ -22,22 +22,34 @@ function App() {
   });
   return (
     <>
-      <div className="container">
-        {loading ? (
-          <Loading />
-        ) : (
-          <>
-            {showModal && (
-              <Modal setShowModal={setShowModal} project={projectOnModal} />
-            )}
-            <div className="headerbg"></div>
-            <Header />
-            <Summary />
-            <Projects openModal={openModal} />
-            <Contact />
-          </>
-        )}
-      </div>
+      {loading ? (
+        <Loading />
+      ) : (
+        <>
+          <span className="stars"></span>
+          <span className="stars"></span>
+          <span className="stars"></span>
+          <span className="stars"></span>
+          <span className="stars"></span>
+          <span className="stars"></span>
+          <span className="stars"></span>
+          <span className="stars"></span>
+          <span className="stars"></span>
+          <span className="stars"></span>
+          <div className="container">
+            <div>
+              {showModal && (
+                <Modal setShowModal={setShowModal} project={projectOnModal} />
+              )}
+              <div className="headerbg"></div>
+              <Header />
+              <Summary />
+              <Projects openModal={openModal} />
+              <Contact />
+            </div>
+          </div>
+        </>
+      )}
     </>
   );
 }

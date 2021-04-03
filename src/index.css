@@ -13,7 +13,7 @@ body {
     font-family: 'Kite One', sans-serif, source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #fff;
+    background-color: #fff
 }
 
 code {
@@ -24,9 +24,92 @@ h3 {
     font-family: 'Satisfy', cursive;
 }
 
+li {
+    list-style: none;
+}
+
+.stars {
+    width: 2px;
+    height: 6rem;
+    background-image: linear-gradient( #fff, darkgray);
+    position: absolute;
+    opacity: 0;
+}
+
+.stars:nth-child(1) {
+    top: 4rem;
+    left: 90vw;
+    animation: shooting 2s ease-in-out 0s infinite normal forwards;
+}
+
+.stars:nth-child(2) {
+    top: 3rem;
+    left: 10vw;
+    animation: shooting 2s ease-in-out 0.5s infinite normal forwards;
+}
+
+.stars:nth-child(3) {
+    top: 5rem;
+    left: 95vw;
+    animation: shooting 2s ease-in-out 1s infinite normal forwards;
+}
+
+.stars:nth-child(4) {
+    top: 1rem;
+    left: 25vw;
+    animation: shooting 2s ease-in-out 1.5s infinite normal forwards;
+}
+
+.stars:nth-child(5) {
+    top: 2rem;
+    left: 75vw;
+    animation: shooting 2s ease-in-out 2s infinite normal forwards;
+}
+
+.stars:nth-child(6) {
+    top: 2rem;
+    left: 5vw;
+    animation: shooting 2s ease-in-out 2.5s infinite normal forwards;
+}
+
+.stars:nth-child(7) {
+    top: 2rem;
+    left: 12vw;
+    animation: shooting 2s ease-in-out 3s infinite normal forwards;
+}
+
+.stars:nth-child(8) {
+    top: 2rem;
+    left: 92vw;
+    animation: shooting 1s ease-in-out 3.5s infinite normal forwards;
+}
+
+.stars:nth-child(9) {
+    top: 2rem;
+    left: 82vw;
+    animation: shooting 2s ease-in-out 3.5s infinite normal forwards;
+}
+
+.stars:nth-child(10) {
+    top: 2rem;
+    left: 22vw;
+    animation: shooting 1s ease-in-out 4s infinite normal forwards;
+}
+
+@keyframes shooting {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        top: 100vh;
+    }
+}
+
 .container {
     max-width: 600px;
     margin: 0 auto;
+    min-height: 100vh;
 }
 
 .headerbg {
@@ -153,4 +236,10 @@ a {
 .blockbtn2 {
     background-color: #d2232e;
     color: aliceblue;
+}
+
+@media (max-width:900px) {
+    .stars {
+        visibility: hidden;
+    }
 }

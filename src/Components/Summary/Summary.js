@@ -19,6 +19,12 @@ const Maincontent = () => {
               certified Project Manager delivering projects in banking domain.
               15+ years of IT experience.
             </p>
+            <h4>Technology</h4>
+            <ul>
+              <li>React, JavaScript, HTML, CSS</li>
+              <li>Node, Express, MongoDB</li>
+              <li>GraphQL, REST</li>
+            </ul>
             <a href="#portfolio">View Projects</a>
           </article>
           <article className={style.cardBody_image}>
