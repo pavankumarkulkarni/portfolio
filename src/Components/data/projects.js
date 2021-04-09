@@ -14,6 +14,7 @@ import minecraft from "../images/minecraft.PNG";
 import minecraft2 from "../images/minecraft2.PNG";
 import movie from "../images/movie.PNG";
 import movie2 from "../images/movie2.PNG";
+import gr1 from "../images/gr1.PNG";
 
 const projects = {
   data: [
@@ -35,6 +36,24 @@ const projects = {
         "Sign up/registration is implemented by JWT tokens and encryption.",
         "Registered user can validate saved addresses via USPS validator service.",
         "Admin Screen is also responsive to screen size.",
+      ],
+    },
+    {
+      _id: 10,
+      name: "Book Reading list",
+      summary:
+        "MERN stack application. GraphQL API in Apollo client and server.",
+      img: [gr1, gr1],
+      keywords: ["MERN", "GraphQL", "Apollo", "Hooks", "Heroku"],
+      appUrl: "https://graphql-reading.herokuapp.com/",
+      githubUrl: [
+        "https://github.com/pavankumarkulkarni/MERN_ReadingList_client",
+        "https://github.com/pavankumarkulkarni/MERN_ReadingList_server",
+      ],
+      details: [
+        "Full MERN stack application. Add Books, authors. Delete books. Get book details and all other books by same author in single query.",
+        "Data modelled in MongoDB. Used Atlas cloud solution to store data. Used Mongoose to interact with mongoDB",
+        "Apollo GraphQL server for creating schemas, queries and mutations.Express for webserver. Apollo client for Graph connection and queries from client side using latest hook implementation.React for UI",
       ],
     },
     {
